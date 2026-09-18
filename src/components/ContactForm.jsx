@@ -57,7 +57,7 @@ export default function ContactForm() {
                 href={s.href}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-[9px] rounded-full border border-[#C9BFAB] px-[22px] py-[13px] transition-colors hover:border-ink hover:bg-ink hover:text-cream active:bg-ink active:text-cream"
+                className="inline-flex items-center gap-[9px] rounded-full border border-[#C9BFAB] px-[22px] py-[13px] transition-colors hover:border-brass hover:text-brass active:border-brass active:text-brass"
               >
                 <SocialIcon id={s.id} />
                 <span>{s.label}</span>
@@ -122,7 +122,7 @@ export default function ContactForm() {
                         aria-pressed={on}
                         className={
                           'min-h-[42px] rounded-full border px-[17px] py-[11px] text-[11px] uppercase tracking-[0.16em] transition-colors duration-[350ms] ' +
-                          (on ? 'border-ink bg-ink text-cream' : 'border-line-warm hover:border-ink hover:bg-ink hover:text-cream')
+                          (on ? 'border-ink bg-ink text-cream' : 'border-line-warm hover:border-brass hover:text-brass')
                         }
                       >
                         {t(opt.it, opt.en)}
@@ -144,7 +144,7 @@ export default function ContactForm() {
                 <button
                   type="submit"
                   disabled={sending}
-                  className="rounded-full border border-ink px-8 py-4 text-[11px] font-medium uppercase tracking-[0.2em] text-ink transition-colors hover:bg-ink hover:text-cream active:bg-ink active:text-cream disabled:opacity-60"
+                  className="rounded-full border border-ink px-8 py-4 text-[11px] font-medium uppercase tracking-[0.2em] text-ink transition-colors hover:border-brass hover:text-brass active:border-brass active:text-brass disabled:opacity-60"
                 >
                   {sending ? t('Invio in corso\u2026', 'Sending\u2026') : t('Invia richiesta', 'Send request')}
                 </button>

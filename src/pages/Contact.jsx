@@ -31,14 +31,14 @@ export default function Contact() {
                 href={whatsapp.href}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-[9px] rounded-full border border-cream/55 px-[26px] py-[15px] font-medium text-cream transition-colors hover:border-cream hover:bg-cream hover:text-ink active:border-cream active:bg-cream active:text-ink"
+                className="inline-flex items-center gap-[9px] rounded-full border border-cream/55 px-[26px] py-[15px] font-medium text-cream transition-colors hover:border-brass-light hover:text-brass-light active:border-brass-light active:text-brass-light"
               >
                 <SocialIcon id="whatsapp" />
                 <span>{t('Scrivi su WhatsApp', 'Message on WhatsApp')}</span>
               </a>
               <a
                 href={CONTACT.phoneHref}
-                className="inline-flex items-center rounded-full border border-cream/55 px-[26px] py-[15px] font-medium text-cream transition-colors hover:border-cream hover:bg-cream hover:text-ink"
+                className="inline-flex items-center rounded-full border border-cream/55 px-[26px] py-[15px] font-medium text-cream transition-colors hover:border-brass-light hover:text-brass-light"
               >
                 {CONTACT.phone}
               </a>

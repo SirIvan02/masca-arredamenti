@@ -50,10 +50,11 @@ export default function Header() {
         : 'text-ink';
 
   // over the dark hero / dark bar an ink hover would vanish into the background
+  // simple buttons: only the ink changes on hover, no fill
   const onLightBar = scrolled && !onDarkGround && !open;
   const pillHover = onLightBar
-    ? 'hover:border-ink hover:bg-ink hover:text-cream'
-    : 'hover:border-cream hover:bg-cream hover:text-ink';
+    ? 'hover:border-brass hover:text-brass'
+    : 'hover:border-brass-light hover:text-brass-light';
 
   const drawerLink =
     'flex items-baseline gap-4 border-b border-cream/15 py-5 font-serif text-[clamp(30px,8vw,44px)] leading-none';
@@ -133,7 +134,7 @@ export default function Header() {
                 href={whatsapp.href}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center justify-center rounded-full border border-cream/55 px-[26px] py-[17px] text-center text-[11px] font-medium uppercase tracking-[0.2em] text-cream transition-colors hover:border-cream hover:bg-cream hover:text-ink active:border-cream active:bg-cream active:text-ink"
+                className="flex items-center justify-center rounded-full border border-cream/55 px-[26px] py-[17px] text-center text-[11px] font-medium uppercase tracking-[0.2em] text-cream transition-colors hover:border-brass-light hover:text-brass-light active:border-brass-light active:text-brass-light"
               >
                 <span>{t('Sopralluogo su WhatsApp', 'Book a site visit on WhatsApp')}</span>
               </a>
@@ -145,7 +146,7 @@ export default function Header() {
                 </p>
                 <button
                   onClick={toggle}
-                  className="rounded-full border border-cream/55 px-5 py-3 text-[11px] font-medium uppercase tracking-[0.2em] text-cream transition-colors hover:border-cream hover:bg-cream hover:text-ink"
+                  className="rounded-full border border-cream/55 px-5 py-3 text-[11px] font-medium uppercase tracking-[0.2em] text-cream transition-colors hover:border-brass-light hover:text-brass-light"
                 >
                   {en ? 'IT' : 'EN'}
                 </button>

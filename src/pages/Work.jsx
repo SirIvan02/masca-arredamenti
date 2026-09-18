@@ -31,7 +31,7 @@ export default function Work() {
                 onClick={() => setCat(c.id)}
                 className={
                   'rounded-full border px-4 py-2.5 transition-colors ' +
-                  (active ? 'border-ink bg-ink text-cream' : 'border-[#D9D0BE] hover:border-ink hover:bg-ink hover:text-cream')
+                  (active ? 'border-ink bg-ink text-cream' : 'border-[#D9D0BE] hover:border-brass hover:text-brass')
                 }
               >
                 {t(c.it, c.en)}

@@ -37,7 +37,7 @@ export default function Offers() {
       <div className="mt-11 flex justify-center">
         <Link
           to="/contatti"
-          className="rounded-full border border-ink px-[30px] py-[15px] text-[11px] font-medium uppercase tracking-[0.2em] text-ink transition-colors hover:bg-ink hover:text-cream active:bg-ink active:text-cream"
+          className="rounded-full border border-ink px-[30px] py-[15px] text-[11px] font-medium uppercase tracking-[0.2em] text-ink transition-colors hover:border-brass hover:text-brass active:border-brass active:text-brass"
         >
           {t('Chiedi disponibilit\u00e0', 'Ask about availability')}
         </Link>
