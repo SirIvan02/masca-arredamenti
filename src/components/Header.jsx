@@ -117,7 +117,7 @@ export default function Header() {
                 href={whatsapp.href}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex min-h-[52px] items-center justify-center rounded-full bg-cream px-[26px] py-4 text-center text-[11px] uppercase tracking-[0.2em] text-ink"
+                className="flex min-h-[54px] items-center justify-center rounded-full bg-cream px-[26px] py-[17px] text-center text-[11px] font-medium uppercase tracking-[0.2em] text-ink transition-colors hover:bg-brass-light hover:text-ink active:bg-brass-light"
               >
                 {t('Sopralluogo su WhatsApp', 'Book a site visit on WhatsApp')}
               </a>
@@ -129,7 +129,7 @@ export default function Header() {
                 </p>
                 <button
                   onClick={toggle}
-                  className="min-h-[44px] rounded-full border border-cream/40 px-[18px] py-3 text-[11px] uppercase tracking-[0.2em] text-cream"
+                  className="min-h-[44px] rounded-full border border-cream/55 px-5 py-3 text-[11px] font-medium uppercase tracking-[0.2em] text-cream transition-colors hover:border-cream hover:bg-cream hover:text-ink"
                 >
                   {en ? 'IT' : 'EN'}
                 </button>
