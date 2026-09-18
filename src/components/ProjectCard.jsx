@@ -6,12 +6,12 @@ export default function ProjectCard({ project, showArrow = false }) {
   const { t } = useLang();
   return (
     <motion.div
-      layout
       initial={{ opacity: 0, scale: 0.985 }}
       animate={{ opacity: 1, scale: 1 }}
       exit={{ opacity: 0, scale: 0.985 }}
       transition={{ duration: 0.5, ease: [0.22, 0.7, 0.2, 1] }}
       className={project.span ? 'sm:col-span-2' : ''}
+      style={{ minWidth: 0 }}
     >
       <Link
         to={'/realizzazioni/' + project.slug}

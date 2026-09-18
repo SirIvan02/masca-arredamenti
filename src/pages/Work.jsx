@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { AnimatePresence, motion } from 'motion/react';
+import { AnimatePresence } from 'motion/react';
 import Reveal from '../components/Reveal.jsx';
 import ProjectCard from '../components/ProjectCard.jsx';
 import { CATEGORIES, PROJECTS } from '../data/projects.js';
@@ -41,8 +41,8 @@ export default function Work() {
         </div>
       </div>
 
-      <motion.div layout className="mt-[2px] grid gap-[2px] bg-line [grid-template-columns:repeat(auto-fit,minmax(min(100%,330px),1fr))]">
-        <AnimatePresence mode="popLayout">
+      <div className="mt-[2px] grid gap-[2px] bg-line [grid-template-columns:repeat(auto-fit,minmax(min(100%,330px),1fr))]">
+        <AnimatePresence initial={false}>
           {shown.map((p) => (
             <ProjectCard key={p.slug} project={p} showArrow={p.span} />
           ))}
@@ -70,7 +70,7 @@ export default function Work() {
             </div>
           </Link>
         )}
-      </motion.div>
+      </div>
 
       {shown.length === 0 && (
         <p className="mt-14 text-center text-[14px] text-muted">

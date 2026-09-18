@@ -28,8 +28,10 @@ export default function Cursor() {
       if (dot.current) dot.current.style.opacity = '1';
       const card = e.target.closest('[data-cursor="view"]');
       const link = e.target.closest('a, button');
+      // only the project cards get the big dot: a 48px difference-blend disc over a
+      // filled pill inverts its label and reads as a black blob
       if (card) { setSize(62); setLabel(en ? 'View' : 'Apri'); }
-      else if (link) { setSize(48); setLabel(''); }
+      else if (link) { setSize(20); setLabel(''); }
       else { setSize(14); setLabel(''); }
     };
     const onOut = () => { if (dot.current) dot.current.style.opacity = '0'; };
