@@ -119,7 +119,7 @@ export default function Header() {
                 rel="noopener noreferrer"
                 className="flex min-h-[54px] items-center justify-center rounded-full bg-cream px-[26px] py-[17px] text-center text-[11px] font-medium uppercase tracking-[0.2em] text-ink transition-colors hover:bg-brass-light hover:text-ink active:bg-brass-light"
               >
-                {t('Sopralluogo su WhatsApp', 'Book a site visit on WhatsApp')}
+                <span>{t('Sopralluogo su WhatsApp', 'Book a site visit on WhatsApp')}</span>
               </a>
               <div className="flex flex-wrap items-center justify-between gap-4 text-[12px] leading-[1.7] text-cream/60">
                 <p>
