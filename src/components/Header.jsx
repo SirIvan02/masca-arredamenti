@@ -87,7 +87,7 @@ export default function Header() {
           </button>
           <Link
             to="/contatti"
-            className={'rounded-full border border-current px-[19px] py-[11px] transition-colors ' + pillHover}
+            className={'rounded-full border border-current px-3 py-2 uppercase tracking-[0.2em] opacity-80 transition-colors duration-[350ms] hover:opacity-100 ' + pillHover}
           >
             {t('Sopralluogo', 'Book a survey')}
           </Link>
