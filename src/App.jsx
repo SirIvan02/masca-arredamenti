@@ -1,5 +1,6 @@
 import { Route, Routes, useLocation } from 'react-router-dom';
 import { AnimatePresence, motion } from 'motion/react';
+import { Analytics } from '@vercel/analytics/react';
 import Header from './components/Header.jsx';
 import Footer from './components/Footer.jsx';
 import Cursor from './components/Cursor.jsx';
@@ -68,6 +69,7 @@ export default function App() {
       </AnimatePresence>
 
       <Footer />
+      <Analytics />
     </>
   );
 }
