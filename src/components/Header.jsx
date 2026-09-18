@@ -11,8 +11,16 @@ export default function Header() {
   const { pathname } = useLocation();
   const [scrolled, setScrolled] = useState(false);
   const [open, setOpen] = useState(false);
+  const [narrow, setNarrow] = useState(() => window.matchMedia('(max-width: 980px)').matches);
   const overHero = DARK_TOP.includes(pathname) || pathname.startsWith('/realizzazioni/');
   const whatsapp = SOCIAL.find((s) => s.id === 'whatsapp');
+
+  useEffect(() => {
+    const mq = window.matchMedia('(max-width: 980px)');
+    const onChange = () => setNarrow(mq.matches);
+    mq.addEventListener('change', onChange);
+    return () => mq.removeEventListener('change', onChange);
+  }, []);
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 24);
@@ -28,11 +36,13 @@ export default function Header() {
     return () => { document.body.style.overflow = ''; };
   }, [open]);
 
-  const dark = overHero && !scrolled;
+  // on narrow viewports the bar stays dark, matching the drawer
+  const onDarkGround = narrow || overHero;
+  const dark = onDarkGround && !scrolled;
   const shell = open
     ? 'text-cream'
     : scrolled
-      ? overHero
+      ? onDarkGround
         ? 'bg-ink/70 backdrop-blur-md text-cream shadow-[0_1px_0_rgba(20,17,13,.08)]'
         : 'bg-cream/90 backdrop-blur-md text-ink shadow-[0_1px_0_rgba(20,17,13,.08)]'
       : dark
@@ -82,7 +92,7 @@ export default function Header() {
           onClick={() => setOpen((v) => !v)}
           aria-label="Menu"
           aria-expanded={open}
-          className="inline-flex min-h-[44px] items-center gap-2.5 py-2.5 pl-3.5 text-[10px] uppercase tracking-[0.2em] min-[981px]:hidden"
+          className="inline-flex items-center gap-2.5 py-2.5 pl-3.5 text-[10px] uppercase tracking-[0.2em] min-[981px]:hidden"
         >
           <span>{open ? t('Chiudi', 'Close') : 'Menu'}</span>
           <span className="flex w-6 flex-col gap-[5px]">
@@ -117,7 +127,7 @@ export default function Header() {
                 href={whatsapp.href}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex min-h-[54px] items-center justify-center rounded-full bg-cream px-[26px] py-[17px] text-center text-[11px] font-medium uppercase tracking-[0.2em] text-ink transition-colors hover:bg-brass-light hover:text-ink active:bg-brass-light"
+                className="flex items-center justify-center rounded-full bg-cream px-[26px] py-[17px] text-center text-[11px] font-medium uppercase tracking-[0.2em] text-ink transition-colors hover:bg-brass-light hover:text-ink active:bg-brass-light"
               >
                 <span>{t('Sopralluogo su WhatsApp', 'Book a site visit on WhatsApp')}</span>
               </a>
@@ -129,7 +139,7 @@ export default function Header() {
                 </p>
                 <button
                   onClick={toggle}
-                  className="min-h-[44px] rounded-full border border-cream/55 px-5 py-3 text-[11px] font-medium uppercase tracking-[0.2em] text-cream transition-colors hover:border-cream hover:bg-cream hover:text-ink"
+                  className="rounded-full border border-cream/55 px-5 py-3 text-[11px] font-medium uppercase tracking-[0.2em] text-cream transition-colors hover:border-cream hover:bg-cream hover:text-ink"
                 >
                   {en ? 'IT' : 'EN'}
                 </button>
