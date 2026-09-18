@@ -49,6 +49,12 @@ export default function Header() {
         ? 'text-cream'
         : 'text-ink';
 
+  // over the dark hero / dark bar an ink hover would vanish into the background
+  const onLightBar = scrolled && !onDarkGround && !open;
+  const pillHover = onLightBar
+    ? 'hover:border-ink hover:bg-ink hover:text-cream'
+    : 'hover:border-cream hover:bg-cream hover:text-ink';
+
   const drawerLink =
     'flex items-baseline gap-4 border-b border-cream/15 py-5 font-serif text-[clamp(30px,8vw,44px)] leading-none';
 
@@ -75,13 +81,13 @@ export default function Header() {
           ))}
           <button
             onClick={toggle}
-            className="rounded-full border border-current px-3 py-2 uppercase tracking-[0.2em] opacity-80 hover:opacity-100"
+            className={'rounded-full border border-current px-3 py-2 uppercase tracking-[0.2em] opacity-80 transition-colors duration-[350ms] hover:opacity-100 ' + pillHover}
           >
             {en ? 'IT' : 'EN'}
           </button>
           <Link
             to="/contatti"
-            className="rounded-full border border-current px-[19px] py-[11px] transition-colors hover:border-ink hover:bg-ink hover:text-cream"
+            className={'rounded-full border border-current px-[19px] py-[11px] transition-colors ' + pillHover}
           >
             {t('Sopralluogo', 'Book a survey')}
           </Link>
@@ -127,7 +133,7 @@ export default function Header() {
                 href={whatsapp.href}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center justify-center rounded-full bg-cream px-[26px] py-[17px] text-center text-[11px] font-medium uppercase tracking-[0.2em] text-ink transition-colors hover:bg-brass-light hover:text-ink active:bg-brass-light"
+                className="flex items-center justify-center rounded-full bg-cream px-[26px] py-[17px] text-center text-[11px] font-medium uppercase tracking-[0.2em] text-ink transition-colors hover:bg-brass hover:text-cream active:bg-brass active:text-cream"
               >
                 <span>{t('Sopralluogo su WhatsApp', 'Book a site visit on WhatsApp')}</span>
               </a>

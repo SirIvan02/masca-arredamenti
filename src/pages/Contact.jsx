@@ -31,7 +31,7 @@ export default function Contact() {
                 href={whatsapp.href}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-[9px] rounded-full bg-cream px-[26px] py-[15px] font-medium text-ink transition-colors hover:bg-brass-light hover:text-ink active:bg-brass-light"
+                className="inline-flex items-center gap-[9px] rounded-full bg-cream px-[26px] py-[15px] font-medium text-ink transition-colors hover:bg-brass hover:text-cream active:bg-brass active:text-cream"
               >
                 <SocialIcon id="whatsapp" />
                 <span>{t('Scrivi su WhatsApp', 'Message on WhatsApp')}</span>

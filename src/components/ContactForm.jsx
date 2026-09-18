@@ -9,9 +9,19 @@ const FIELD =
   'w-full border-0 bg-transparent p-0 py-0.5 font-sans text-[17px] text-ink outline-none placeholder:text-muted/60';
 const LABEL = 'text-[10px] uppercase tracking-[0.26em] text-muted';
 
+const TYPES = [
+  { it: 'Cucina su misura', en: 'Bespoke kitchen' },
+  { it: 'Libreria, armadio, scala', en: 'Bookcase, wardrobe, staircase' },
+  { it: 'Arredo completo di casa', en: 'Full home fit-out' },
+  { it: 'Negozio o retail', en: 'Shop or retail' },
+  { it: 'Allestimento o museo', en: 'Exhibition or museum fittings' },
+  { it: 'Altro', en: 'Something else' },
+];
+
 export default function ContactForm() {
   const { t } = useLang();
   const [sending, setSending] = useState(false);
+  const [tipo, setTipo] = useState(0);
   const [sent, setSent] = useState(false);
 
   const onSubmit = async (e) => {
@@ -98,17 +108,29 @@ export default function ContactForm() {
                 <span className={LABEL}>{t('Telefono (facoltativo)', 'Phone (optional)')}</span>
                 <input name="telefono" type="tel" placeholder="+39 ..." className={FIELD} />
               </label>
-              <label className="grid gap-2 border-b border-line-warm py-4 focus-within:border-brass">
+              <div className="grid gap-3.5 border-b border-line-warm pb-5 pt-4">
                 <span className={LABEL}>{t('Di cosa si tratta', 'What is it about')}</span>
-                <select name="tipo" className={FIELD + ' appearance-none'}>
-                  <option>{t('Cucina su misura', 'Bespoke kitchen')}</option>
-                  <option>{t('Libreria, armadio, scala', 'Bookcase, wardrobe, staircase')}</option>
-                  <option>{t('Arredo completo di casa', 'Full home fit-out')}</option>
-                  <option>{t('Negozio o retail', 'Shop or retail')}</option>
-                  <option>{t('Allestimento o museo', 'Exhibition or museum fittings')}</option>
-                  <option>{t('Altro', 'Something else')}</option>
-                </select>
-              </label>
+                <input type="hidden" name="tipo" value={t(TYPES[tipo].it, TYPES[tipo].en)} readOnly />
+                <div className="flex flex-wrap gap-2">
+                  {TYPES.map((opt, i) => {
+                    const on = i === tipo;
+                    return (
+                      <button
+                        key={opt.it}
+                        type="button"
+                        onClick={() => setTipo(i)}
+                        aria-pressed={on}
+                        className={
+                          'min-h-[42px] rounded-full border px-[17px] py-[11px] text-[11px] uppercase tracking-[0.16em] transition-colors duration-[350ms] ' +
+                          (on ? 'border-ink bg-ink text-cream' : 'border-line-warm hover:border-ink')
+                        }
+                      >
+                        {t(opt.it, opt.en)}
+                      </button>
+                    );
+                  })}
+                </div>
+              </div>
               <label className="grid gap-2 border-b border-line-warm py-4 focus-within:border-brass">
                 <span className={LABEL}>{t('Messaggio', 'Message')}</span>
                 <textarea

@@ -42,7 +42,7 @@ export default function LocationBand() {
               href={'https://www.openstreetmap.org/?mlat=' + CONTACT.lat + '&mlon=' + CONTACT.lon + '#map=16/' + CONTACT.lat + '/' + CONTACT.lon}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center rounded-full bg-cream px-[22px] py-[13px] font-medium text-ink transition-colors hover:bg-brass-light hover:text-ink active:bg-brass-light"
+              className="inline-flex items-center rounded-full bg-cream px-[22px] py-[13px] font-medium text-ink transition-colors hover:bg-brass hover:text-cream active:bg-brass active:text-cream"
             >
               {t('Apri la mappa', 'Open the map')}
             </a>
