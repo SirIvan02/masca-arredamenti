@@ -26,8 +26,8 @@ export default function Footer() {
               </a>
             ))}
           </span>
-          <Link to="/note-legali">{t('Note legali', 'Legal notice')}</Link>
-          <Link to="/privacy">{t('Privacy e cookies', 'Privacy and cookies')}</Link>
+          <Link to="/note-legali" className="transition-colors hover:text-cream">{t('Note legali', 'Legal notice')}</Link>
+          <Link to="/privacy" className="transition-colors hover:text-cream">{t('Privacy e cookies', 'Privacy and cookies')}</Link>
           <span>{CONTACT.rea}</span>
         </p>
       </div>

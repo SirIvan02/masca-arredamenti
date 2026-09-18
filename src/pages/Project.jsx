@@ -17,7 +17,7 @@ export default function Project() {
           {t('Progetto non trovato', 'Project not found')}
         </h1>
         <p className="mt-6 text-[11px] uppercase tracking-[0.2em]">
-          <Link to="/realizzazioni" className="border-b border-[#C9BFAB] pb-1.5">
+          <Link to="/realizzazioni" className="border-b border-[#C9BFAB] pb-1.5 transition-colors hover:border-brass hover:text-brass">
             {t('\u2190 Tutte le realizzazioni', '\u2190 All work')}
           </Link>
         </p>

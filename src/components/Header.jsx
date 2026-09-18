@@ -56,7 +56,7 @@ export default function Header() {
     : 'hover:border-cream hover:bg-cream hover:text-ink';
 
   const drawerLink =
-    'flex items-baseline gap-4 border-b border-cream/15 py-5 font-serif text-[clamp(30px,8vw,44px)] leading-none';
+    'flex items-baseline gap-4 border-b border-cream/15 py-5 font-serif text-[clamp(30px,8vw,44px)] leading-none transition-colors duration-300 hover:text-brass-light';
 
   return (
     <>
@@ -98,7 +98,7 @@ export default function Header() {
           onClick={() => setOpen((v) => !v)}
           aria-label="Menu"
           aria-expanded={open}
-          className="inline-flex items-center gap-2.5 py-2.5 pl-3.5 text-[10px] uppercase tracking-[0.2em] min-[981px]:hidden"
+          className="inline-flex items-center gap-2.5 py-2.5 pl-3.5 text-[10px] uppercase tracking-[0.2em] opacity-85 transition-opacity duration-300 hover:opacity-100 min-[981px]:hidden"
         >
           <span>{open ? t('Chiudi', 'Close') : 'Menu'}</span>
           <span className="flex w-6 flex-col gap-[5px]">
