@@ -14,19 +14,19 @@ export default function Contact() {
       <div className="bg-ink px-[30px] pb-[clamp(70px,9vw,120px)] pt-[calc(clamp(70px,9vw,130px)+60px)] text-cream">
         <div className="mx-auto grid max-w-[1440px] gap-[clamp(36px,6vw,90px)] [grid-template-columns:repeat(auto-fit,minmax(min(100%,290px),1fr))]">
           <div>
-            <Reveal as="p" className="mb-5 text-[11px] uppercase tracking-[0.32em] text-[#9A9086]">
+            <Reveal as="p" className="mb-5 text-[12px] min-[640px]:text-[11px] uppercase tracking-[0.32em] text-[#9A9086]">
               {t('04 \u2014 Contatti', '04 \u2014 Contact')}
             </Reveal>
-            <Reveal as="h1" className="font-serif text-[clamp(36px,5.2vw,86px)] leading-none tracking-[-0.02em] text-balance">
+            <Reveal as="h1" className="font-serif text-[clamp(41px,5.2vw,86px)] leading-none tracking-[-0.02em] text-balance">
               {t('Parliamo del vostro spazio.', "Let's talk about your space.")}
             </Reveal>
-            <Reveal as="p" className="mt-6.5 max-w-[32em] text-[16px] leading-[1.75] text-cream/80">
+            <Reveal as="p" className="mt-6.5 max-w-[32em] text-[17px] min-[640px]:text-[16px] leading-[1.75] text-cream/80">
               {t(
                 'Mandateci una foto e una misura approssimativa: vi diciamo se \u00e8 un lavoro per noi. Il sopralluogo \u00e8 gratuito.',
                 "Send us a photo and a rough measurement and we'll tell you whether it's something for us. The site visit is free."
               )}
             </Reveal>
-            <Reveal className="mt-9 flex flex-wrap gap-2.5 text-[11px] uppercase tracking-[0.2em]">
+            <Reveal className="mt-9 flex flex-wrap gap-2.5 text-[12px] min-[640px]:text-[11px] uppercase tracking-[0.2em]">
               <a
                 href={whatsapp.href}
                 target="_blank"
@@ -45,9 +45,9 @@ export default function Contact() {
             </Reveal>
           </div>
 
-          <Reveal className="grid content-start gap-6.5 text-[15px] leading-[1.8]">
+          <Reveal className="grid content-start gap-6.5 text-[16px] min-[640px]:text-[15px] leading-[1.8]">
             <div>
-              <p className="mb-2 text-[10px] uppercase tracking-[0.26em] text-[#9A9086]">{t('Laboratorio', 'Workshop')}</p>
+              <p className="mb-2 text-[11px] min-[640px]:text-[10px] uppercase tracking-[0.26em] text-[#9A9086]">{t('Laboratorio', 'Workshop')}</p>
               <p>
                 {CONTACT.street}
                 <br />
@@ -55,11 +55,11 @@ export default function Contact() {
               </p>
             </div>
             <div>
-              <p className="mb-2 text-[10px] uppercase tracking-[0.26em] text-[#9A9086]">{t('Visite', 'Visits')}</p>
+              <p className="mb-2 text-[11px] min-[640px]:text-[10px] uppercase tracking-[0.26em] text-[#9A9086]">{t('Visite', 'Visits')}</p>
               <p>{t('Dal luned\u00ec al venerd\u00ec, su appuntamento', 'Monday to Friday, by appointment')}</p>
             </div>
             <div>
-              <p className="mb-2 text-[10px] uppercase tracking-[0.26em] text-[#9A9086]">Email</p>
+              <p className="mb-2 text-[11px] min-[640px]:text-[10px] uppercase tracking-[0.26em] text-[#9A9086]">Email</p>
               <p>
                 <a href={'mailto:' + CONTACT.email} className="border-b border-cream/30 hover:border-brass-light hover:text-brass-light">
                   {CONTACT.email}
@@ -67,7 +67,7 @@ export default function Contact() {
               </p>
             </div>
             <div>
-              <p className="mb-2 text-[10px] uppercase tracking-[0.26em] text-[#9A9086]">{t('Altrove', 'Elsewhere')}</p>
+              <p className="mb-2 text-[11px] min-[640px]:text-[10px] uppercase tracking-[0.26em] text-[#9A9086]">{t('Altrove', 'Elsewhere')}</p>
               <p className="flex flex-wrap gap-4">
                 {SOCIAL.filter((s) => s.id !== 'whatsapp').map((s) => (
                   <a

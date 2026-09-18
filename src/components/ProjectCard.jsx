@@ -29,10 +29,10 @@ export default function ProjectCard({ project, showArrow = false }) {
         <div className="flex justify-between gap-[18px] px-1 pb-1 pt-[18px]">
           <div>
             <h3 className="font-serif text-[26px] leading-tight">{t(project.title, project.titleEn)}</h3>
-            <p className="mt-1.5 text-[13px] text-muted">{t(project.meta, project.metaEn)}</p>
+            <p className="mt-1.5 text-[14px] min-[640px]:text-[13px] text-muted">{t(project.meta, project.metaEn)}</p>
           </div>
           {showArrow && (
-            <span className="whitespace-nowrap text-[11px] uppercase tracking-[0.2em] text-muted">
+            <span className="whitespace-nowrap text-[12px] min-[640px]:text-[11px] uppercase tracking-[0.2em] text-muted">
               {t('Scheda \u2192', 'Project \u2192')}
             </span>
           )}

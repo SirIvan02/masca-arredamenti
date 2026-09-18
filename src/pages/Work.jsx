@@ -15,14 +15,14 @@ export default function Work() {
     <div className="mx-auto max-w-[1600px] px-[30px] pb-[clamp(70px,9vw,130px)] pt-[calc(clamp(70px,9vw,130px)+60px)]">
       <div className="flex flex-wrap items-end justify-between gap-[26px] border-b border-line pb-6">
         <div>
-          <Reveal as="p" className="mb-5 text-[11px] uppercase tracking-[0.32em] text-muted">
+          <Reveal as="p" className="mb-5 text-[12px] min-[640px]:text-[11px] uppercase tracking-[0.32em] text-muted">
             {t('02 \u2014 Realizzazioni', '02 \u2014 Work')}
           </Reveal>
-          <Reveal as="h1" className="font-serif text-[clamp(34px,4.4vw,70px)] leading-[1.02] tracking-[-0.02em]">
+          <Reveal as="h1" className="font-serif text-[clamp(39px,4.4vw,70px)] leading-[1.02] tracking-[-0.02em]">
             {t('Progetti, uno alla volta', 'Projects, one at a time')}
           </Reveal>
         </div>
-        <div className="flex flex-wrap gap-2 text-[10.5px] uppercase tracking-[0.2em]">
+        <div className="flex flex-wrap gap-2 text-[11.5px] min-[640px]:text-[10.5px] uppercase tracking-[0.2em]">
           {CATEGORIES.map((c) => {
             const active = c.id === cat;
             return (
@@ -54,17 +54,17 @@ export default function Work() {
             data-cursor="view"
             className="flex min-h-[320px] flex-col justify-between gap-10 bg-ink p-[34px] text-cream transition-colors hover:bg-ink-soft"
           >
-            <p className="text-[11px] uppercase tracking-[0.32em] text-[#9A9086]">
+            <p className="text-[12px] min-[640px]:text-[11px] uppercase tracking-[0.32em] text-[#9A9086]">
               {t('Prossimo progetto', 'Next project')}
             </p>
             <div>
-              <h3 className="font-serif text-[clamp(26px,2.4vw,34px)] leading-[1.12] tracking-[-0.01em] text-balance">
+              <h3 className="font-serif text-[clamp(30px,2.4vw,34px)] leading-[1.12] tracking-[-0.01em] text-balance">
                 {t('Il vostro, misurato sulla stanza che deve occupare.', 'Yours, measured on the room it has to fit.')}
               </h3>
-              <p className="mt-3.5 text-[14px] leading-[1.7] text-cream/60">
+              <p className="mt-3.5 text-[15px] min-[640px]:text-[14px] leading-[1.7] text-cream/60">
                 {t('Sopralluogo gratuito in Veneto e Friuli.', 'Free site visit across Veneto and Friuli.')}
               </p>
-              <span className="mt-[26px] inline-block border-b border-cream/35 pb-1.5 text-[11px] uppercase tracking-[0.2em]">
+              <span className="mt-[26px] inline-block border-b border-cream/35 pb-1.5 text-[12px] min-[640px]:text-[11px] uppercase tracking-[0.2em]">
                 {t('Richiedi un sopralluogo \u2192', 'Book a site visit \u2192')}
               </span>
             </div>
@@ -73,7 +73,7 @@ export default function Work() {
       </div>
 
       {shown.length === 0 && (
-        <p className="mt-14 text-center text-[14px] text-muted">
+        <p className="mt-14 text-center text-[15px] min-[640px]:text-[14px] text-muted">
           {t('Nessun progetto in questa categoria, per ora.', 'No projects in this category yet.')}
         </p>
       )}

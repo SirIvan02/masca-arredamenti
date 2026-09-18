@@ -17,27 +17,27 @@ export default function LocationBand() {
       <div className="grid [grid-template-columns:repeat(auto-fit,minmax(min(100%,340px),1fr))]">
         <div className="ml-auto grid w-full max-w-[620px] content-center gap-[26px] px-[30px] py-[clamp(50px,6vw,90px)] text-cream">
           <div>
-            <p className="mb-[18px] text-[11px] uppercase tracking-[0.32em] text-[#9A9086]">
+            <p className="mb-[18px] text-[12px] min-[640px]:text-[11px] uppercase tracking-[0.32em] text-[#9A9086]">
               {t('Dove siamo', 'Where we are')}
             </p>
-            <h2 className="font-serif text-[clamp(30px,3.6vw,52px)] leading-[1.04] tracking-[-0.015em]">
+            <h2 className="font-serif text-[clamp(34px,3.6vw,52px)] leading-[1.04] tracking-[-0.015em]">
               Mogliano Veneto
             </h2>
           </div>
-          <p className="text-[16px] leading-[1.8] text-cream/80">
+          <p className="text-[17px] min-[640px]:text-[16px] leading-[1.8] text-cream/80">
             {CONTACT.street}
             <br />
             {CONTACT.city}
             <br />
             {CONTACT.region}
           </p>
-          <p className="text-[15px] leading-[1.75] text-cream/60">
+          <p className="text-[16px] min-[640px]:text-[15px] leading-[1.75] text-cream/60">
             {t(
               'Il laboratorio \u00e8 il posto dove tutto viene disegnato, costruito e provato. Visite su appuntamento, dal luned\u00ec al venerd\u00ec. Venti minuti da Venezia, quindici da Treviso.',
               'The workshop is where everything is drawn, built and tested. Visits by appointment, Monday to Friday. Twenty minutes from Venice, fifteen from Treviso.'
             )}
           </p>
-          <div className="flex flex-wrap gap-2.5 text-[11px] uppercase tracking-[0.2em]">
+          <div className="flex flex-wrap gap-2.5 text-[12px] min-[640px]:text-[11px] uppercase tracking-[0.2em]">
             <a
               href={'https://www.openstreetmap.org/?mlat=' + CONTACT.lat + '&mlon=' + CONTACT.lon + '#map=16/' + CONTACT.lat + '/' + CONTACT.lon}
               target="_blank"

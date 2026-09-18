@@ -33,10 +33,10 @@ export default function Process() {
   const { t } = useLang();
   return (
     <div className="mx-auto max-w-[1440px] px-[30px] pb-[clamp(70px,9vw,130px)] pt-[calc(clamp(70px,9vw,130px)+60px)]">
-      <Reveal as="p" className="mb-5.5 text-[11px] uppercase tracking-[0.32em] text-muted">
+      <Reveal as="p" className="mb-5.5 text-[12px] min-[640px]:text-[11px] uppercase tracking-[0.32em] text-muted">
         {t('03 \u2014 Servizi', '03 \u2014 Process')}
       </Reveal>
-      <Reveal as="h1" className="max-w-[18em] font-serif text-[clamp(36px,5.2vw,84px)] leading-none tracking-[-0.02em] text-balance">
+      <Reveal as="h1" className="max-w-[18em] font-serif text-[clamp(41px,5.2vw,84px)] leading-none tracking-[-0.02em] text-balance">
         {t('Dalla prima telefonata alla stanza finita', 'From the first phone call to the finished room')}
       </Reveal>
 
@@ -45,8 +45,8 @@ export default function Process() {
           <Reveal key={s.it} className="grid gap-[clamp(18px,5vw,70px)] border-b border-line px-1 py-8 [grid-template-columns:auto_minmax(0,1fr)]">
             <span className="font-serif text-[19px] text-brass">{String(i + 1).padStart(2, '0')}</span>
             <div className="grid gap-[clamp(14px,4vw,50px)] [grid-template-columns:repeat(auto-fit,minmax(min(100%,230px),1fr))]">
-              <h3 className="font-serif text-[clamp(24px,2.5vw,36px)] leading-[1.1]">{t(s.it, s.en)}</h3>
-              <p className="text-[16px] leading-[1.75] text-body">{t(s.bodyIt, s.bodyEn)}</p>
+              <h3 className="font-serif text-[clamp(27px,2.5vw,36px)] leading-[1.1]">{t(s.it, s.en)}</h3>
+              <p className="text-[17px] min-[640px]:text-[16px] leading-[1.75] text-body">{t(s.bodyIt, s.bodyEn)}</p>
             </div>
           </Reveal>
         ))}

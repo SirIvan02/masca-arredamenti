@@ -15,10 +15,10 @@ export default function Studio() {
   return (
     <>
       <div className="mx-auto max-w-[1440px] px-[30px] pb-[clamp(44px,5vw,70px)] pt-[calc(clamp(70px,9vw,130px)+60px)]">
-        <Reveal as="p" className="mb-6 text-[11px] uppercase tracking-[0.32em] text-muted">
+        <Reveal as="p" className="mb-6 text-[12px] min-[640px]:text-[11px] uppercase tracking-[0.32em] text-muted">
           {t('01 \u2014 Chi siamo', '01 \u2014 Studio')}
         </Reveal>
-        <Reveal as="h1" className="max-w-[18em] font-serif text-[clamp(36px,5.4vw,88px)] leading-none tracking-[-0.02em] text-balance">
+        <Reveal as="h1" className="max-w-[18em] font-serif text-[clamp(41px,5.4vw,88px)] leading-none tracking-[-0.02em] text-balance">
           {t('Un laboratorio che tiene viva la tradizione e continua a imparare.', 'A workshop that keeps tradition alive and keeps learning.')}
         </Reveal>
       </div>
@@ -27,13 +27,13 @@ export default function Studio() {
 
       <div className="mx-auto max-w-[1440px] px-[30px] py-[clamp(56px,7vw,110px)]">
         <div className="grid items-start gap-[clamp(30px,5vw,80px)] [grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr))]">
-          <Reveal as="p" className="font-serif text-[clamp(24px,2.6vw,38px)] leading-[1.28] tracking-[-0.01em] text-pretty">
+          <Reveal as="p" className="font-serif text-[clamp(27px,2.6vw,38px)] leading-[1.28] tracking-[-0.01em] text-pretty">
             {t(
               'Da tre generazioni lavoriamo nell\u2019arredamento su misura. Negli anni abbiamo tenuto intatta la cura del prodotto, mantenendo una finestra aperta su come cambiano materiali, componenti e modi di abitare.',
               'Three generations have worked in bespoke furniture here. Over the years we have kept the craft and the care for the product intact, while keeping a window open on how materials, hardware and the way people live keep changing.'
             )}
           </Reveal>
-          <Reveal className="flex flex-col gap-4.5 text-[16px] leading-[1.75] text-body">
+          <Reveal className="flex flex-col gap-4.5 text-[17px] min-[640px]:text-[16px] leading-[1.75] text-body">
             <p>
               {t(
                 'Ogni lavoro \u00e8 diverso, quindi nulla arriva da un catalogo: fattezze, materiali, tecnologie e finiture si decidono insieme al cliente o all\u2019architetto, stanza per stanza.',
@@ -58,8 +58,8 @@ export default function Studio() {
         <Reveal className="mt-[clamp(50px,6vw,90px)] grid gap-[2px] bg-line [grid-template-columns:repeat(auto-fit,minmax(150px,1fr))]">
           {stats.map(([n, label]) => (
             <div key={label} className="bg-cream px-[22px] py-7">
-              <p className="font-serif text-[clamp(34px,3vw,44px)] leading-none">{n}</p>
-              <p className="mt-2.5 text-[11px] uppercase tracking-[0.22em] text-muted">{label}</p>
+              <p className="font-serif text-[clamp(39px,3vw,44px)] leading-none">{n}</p>
+              <p className="mt-2.5 text-[12px] min-[640px]:text-[11px] uppercase tracking-[0.22em] text-muted">{label}</p>
             </div>
           ))}
         </Reveal>
@@ -75,7 +75,7 @@ export default function Studio() {
               <div className="relative aspect-[4/3] overflow-hidden">
                 <img src={src} alt="" loading="lazy" className="h-full w-full object-cover" />
               </div>
-              <figcaption className="text-[14px] leading-[1.7] text-muted">{cap}</figcaption>
+              <figcaption className="text-[15px] min-[640px]:text-[14px] leading-[1.7] text-muted">{cap}</figcaption>
             </Reveal>
           ))}
         </div>

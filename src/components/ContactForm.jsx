@@ -6,8 +6,8 @@ import Reveal from './Reveal.jsx';
 import { useLang } from '../hooks/useLang.jsx';
 
 const FIELD =
-  'w-full border-0 bg-transparent p-0 py-0.5 font-sans text-[17px] text-ink outline-none placeholder:text-muted/60';
-const LABEL = 'text-[10px] uppercase tracking-[0.26em] text-muted';
+  'w-full border-0 bg-transparent p-0 py-0.5 font-sans text-[18px] min-[640px]:text-[17px] text-ink outline-none placeholder:text-muted/60';
+const LABEL = 'text-[11px] min-[640px]:text-[10px] uppercase tracking-[0.26em] text-muted';
 
 const TYPES = [
   { it: 'Cucina su misura', en: 'Bespoke kitchen' },
@@ -38,19 +38,19 @@ export default function ContactForm() {
     <section className="bg-sand px-[30px] py-[clamp(70px,9vw,120px)]">
       <div className="mx-auto grid max-w-[1440px] items-start gap-[clamp(36px,6vw,90px)] [grid-template-columns:repeat(auto-fit,minmax(min(100%,320px),1fr))]">
         <div>
-          <Reveal as="p" className="mb-5 text-[11px] uppercase tracking-[0.32em] text-muted">
+          <Reveal as="p" className="mb-5 text-[12px] min-[640px]:text-[11px] uppercase tracking-[0.32em] text-muted">
             {t('Richiedi un sopralluogo', 'Request a site visit')}
           </Reveal>
-          <Reveal as="h2" className="max-w-[16em] font-serif text-[clamp(32px,4.2vw,64px)] leading-[1.02] tracking-[-0.02em] text-balance">
+          <Reveal as="h2" className="max-w-[16em] font-serif text-[clamp(36px,4.2vw,64px)] leading-[1.02] tracking-[-0.02em] text-balance">
             {t('Raccontateci cosa avete in mente.', 'Tell us what you have in mind.')}
           </Reveal>
-          <Reveal as="p" className="mt-6 max-w-[32em] text-[16px] leading-[1.75] text-body">
+          <Reveal as="p" className="mt-6 max-w-[32em] text-[17px] min-[640px]:text-[16px] leading-[1.75] text-body">
             {t(
               'Una foto dell\u2019ambiente e una misura approssimativa bastano per iniziare. Rispondiamo entro due giorni lavorativi.',
               'A photo of the room and a rough measurement are enough to start. We reply within two working days.'
             )}
           </Reveal>
-          <Reveal className="mt-[34px] flex flex-wrap gap-2.5 text-[11px] uppercase tracking-[0.2em]">
+          <Reveal className="mt-[34px] flex flex-wrap gap-2.5 text-[12px] min-[640px]:text-[11px] uppercase tracking-[0.2em]">
             {SOCIAL.map((s) => (
               <a
                 key={s.id}
@@ -78,7 +78,7 @@ export default function ContactForm() {
               <p className="font-serif text-[32px] leading-tight">
                 {t('Grazie, richiesta ricevuta.', 'Thank you, request received.')}
               </p>
-              <p className="mt-3.5 text-[15px] leading-[1.7] text-muted">
+              <p className="mt-3.5 text-[16px] min-[640px]:text-[15px] leading-[1.7] text-muted">
                 {t(
                   'Rispondiamo entro due giorni lavorativi. Se \u00e8 urgente, WhatsApp \u00e8 pi\u00f9 veloce.',
                   'We reply within two working days. For something urgent, WhatsApp is faster.'
@@ -121,7 +121,7 @@ export default function ContactForm() {
                         onClick={() => setTipo(i)}
                         aria-pressed={on}
                         className={
-                          'min-h-[42px] rounded-full border px-[17px] py-[11px] text-[11px] uppercase tracking-[0.16em] transition-colors duration-[350ms] ' +
+                          'min-h-[42px] rounded-full border px-[17px] py-[11px] text-[12px] min-[640px]:text-[11px] uppercase tracking-[0.16em] transition-colors duration-[350ms] ' +
                           (on ? 'border-ink bg-ink text-cream' : 'border-line-warm hover:border-brass hover:text-brass')
                         }
                       >
@@ -144,11 +144,11 @@ export default function ContactForm() {
                 <button
                   type="submit"
                   disabled={sending}
-                  className="rounded-full border border-ink px-8 py-4 text-[11px] font-medium uppercase tracking-[0.2em] text-ink transition-colors hover:border-brass hover:text-brass active:border-brass active:text-brass disabled:opacity-60"
+                  className="rounded-full border border-ink px-8 py-4 text-[12px] min-[640px]:text-[11px] font-medium uppercase tracking-[0.2em] text-ink transition-colors hover:border-brass hover:text-brass active:border-brass active:text-brass disabled:opacity-60"
                 >
                   {sending ? t('Invio in corso\u2026', 'Sending\u2026') : t('Invia richiesta', 'Send request')}
                 </button>
-                <p className="m-0 text-[12px] leading-[1.6] text-muted">
+                <p className="m-0 text-[13px] min-[640px]:text-[12px] leading-[1.6] text-muted">
                   {t('Usiamo i vostri dati solo per rispondere.', 'We only use your details to reply.')}
                 </p>
               </div>
